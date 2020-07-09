@@ -1,0 +1,47 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+@import 'globals';
+@import 'forms';
+@import 'navbar';
+@import 'homepage';
+@import 'restaurant-single';
+@import 'reviews';
+@import 'add-review';
+@import 'restaurant-search';
+@import 'range-input';
+@import 'pagination';
+@import 'footer';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background: $body-bg;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+    
+    main {
+        min-height: 80vh;
+        
+        .section-full {
+            position: relative;
+            padding: 3rem 0;
+            background: #fff;
+
+            &:only-child {
+                background: #fff;
+            }
+
+            .page-header {
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        .section-full-gray {
+            background: $offGreyColor !important;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.rest-single-location {
+    margin-bottom: 0 !important;
+}
+
+.rest-single-star-container {
+    margin-top: 1.5rem;
+
+    .rest-single-star-item {
+        background: $primaryColor;
+        padding: 0.5rem 0.6rem;
+        color: #f5d742;
+        border-bottom: 1px solid $primaryColorLight;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            border: none;
+        }
+
+        &:hover {
+            background: $primaryColorLight;
+        }
+
+        span {
+            color: #fff;
+            margin-left: 0.1rem;
+            margin-right: 0.3rem;
+        }
+
+        .fas {
+            margin-right: 0.3rem;
+        }
+
+        .rest-single-rating-count {
+            background: $offGreyColor;
+            color: #607d8b;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 0.1rem 0.5rem;
+            margin-left: auto;
+            min-width: 25px;
+            text-align: center;
+        }
+    }
+
+    .rest-single-star-item-all {
+        color: #fff;
+        font-size: 1.2rem;
+        border-bottom: 3px solid $primaryColorLight;
+
+        span {
+            background: $offGreyColor;
+            color: $primaryColor;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 0.1rem 0.5rem;
+            font-size: 1rem;
+            margin-left: auto;
+            min-width: 25px;
+            text-align: center;
+        }
+    }
+}
+
+#rest-single-review-wrapper {
+    padding: 1.25rem;
+
+    .rest-single-review-item {
+        background: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 180px;
+        transition: all 0.4s;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transition: all 0.3s;
+
+        .rest-single-review-item-top {
+            background: $primaryColor;
+            padding: 0.6rem 1rem;
+            color: #f5d742;
+            display: flex;
+            align-items: center;
+
+            .fas {
+                margin-right: 0.25rem;
+            }
+
+            span {
+                color: #fff;
+                font-size: 0.8rem;
+                font-weight: 500;
+                margin-left: auto;
+            }
+        }
+
+        .rest-single-review-item-bottom {
+            display: flex;
+            overflow: hidden;
+
+            .rest-single-review-author-container {
+                padding: 1rem;
+                background: $primaryColorLightest;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-width: 200px;
+                max-width: 200px;
+
+                .rest-single-review-avatar {
+                    max-width: 140px;
+                    text-align: center;
+                    margin-bottom: 0.45rem;
+
+                    img {
+                        width: 50%;
+                        border-radius: 100%;
+                    }
+                }
+
+                .rest-single-review-author {
+                    text-align: center;
+                    color: $primaryColor;
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                }
+            }
+
+            .rest-single-review-text-container {
+                padding: 1rem 1rem 50px 1rem;
+                position: relative;
+
+                .rest-single-review-title {
+                    color: $primaryColor;
+                    font-weight: 600;
+                    margin-bottom: 0.15rem;
+                }
+
+                .rest-single-review-messge {
+                    font-size: 0.8rem;
+                    line-height: 1.2;
+                }
+
+                .rest-single-text-overlay {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 40px;
+                    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.5));
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    color: #607d8b;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .rest-single-review-item-expanded {
+        max-height: 2000px;
+    }
+}

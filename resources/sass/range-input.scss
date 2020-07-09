@@ -1,0 +1,58 @@
+.rating-input-container {
+
+
+    .rating-input-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        #rating-icon {
+            font-size: 54px;
+            color: #f5bf5b;
+            margin-bottom: 0.5rem;
+        }
+
+        #rating-stars {
+            font-size: 19px;
+            color: #f5d742;
+            background: #607d8b;
+            padding: 0.1rem 0.75rem;
+            border-radius: 18px;
+
+            .fas {
+                margin: 0 0.2rem;
+            }
+        }
+    }
+
+    .rating-input-range {
+        margin: 1.5rem auto 0 auto;
+        width: 100%;
+        max-width: 300px;
+
+        #rating {
+            height: 8px;
+            width: 100%;
+            -webkit-appearance: none;
+            background: $primaryColorLight;
+            border-radius: 4px;
+            box-shadow: inset 0 3px 12px rgba(0,0,0,0.6);
+        
+            &:focus {
+                outline: none;
+            }
+        }
+        #rating::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background: url('/images/icons/rating-icon.png');
+            height: 36px;
+            width: 36px;
+            margin-bottom: 6px;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+}

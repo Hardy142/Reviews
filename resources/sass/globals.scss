@@ -1,0 +1,39 @@
+h1, h2, h3, h4, h5, h6 {
+    color: $primaryColor;
+}
+h1 {
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem !important;
+}
+h2 {
+    font-size: 1.4rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+h3 {
+    font-size: 1.1rem !important;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    color: #607d8b;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type=text], input[type=email], input[type=password], input[type=phone] {
+    border-radius: 0px !important;
+}
+.button-primary {
+    @include button-primary;
+
+    @media only screen and (max-width: $phone) {
+        width: 100%
+    }
+}
+.button-primary-full-width {
+    @include button-primary;
+
+    width: 100%;
+    display: block !important;
+}

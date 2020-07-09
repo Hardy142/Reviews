@@ -1,0 +1,87 @@
+#add-review-restaurant-item-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 15px;
+    position: relative;
+    z-index: 500;
+    max-height: 400px;
+    background: $primaryColorLightest;
+    display: none;
+
+    a {
+        color: $primaryColor;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .add-review-restaurant-item {
+        min-height: 140px;
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        margin-bottom: 15px;
+        opacity: 0;
+        cursor: pointer;
+        border: 2px solid #eee;
+        clip-path: polygon( 
+            calc(0% + 3px) calc(0% + 3px),
+            calc(100% - 3px) calc(0% + 3px),
+            calc(100% - 3px) calc(100% - 3px),
+            calc(0% + 3px) calc(100% - 3px)
+        );
+        transition: clip-path 0.3s linear;
+        
+        &:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+        }
+        
+        @media only screen and (max-width: $phone) {
+            display: block;
+        }
+
+        .add-review-restaurant-image {
+            flex: 1;
+            max-width: 200px;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+
+            @media only screen and (max-width: $phone) {
+                max-width: 100%;
+                height: 100px;
+            }
+        }
+
+        .add-review-restaurant-info-container {
+            flex: 1;
+            padding: 1rem;
+            position: relative;
+
+            .add-review-restaurant-name {
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .add-review-restaurant-location {
+                font-size: 0.9rem;
+                margin-bottom: 0;
+            }
+
+            .selected-check {
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 30px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                color: #57c975;
+            }
+        }
+    }
+}

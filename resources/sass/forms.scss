@@ -1,0 +1,42 @@
+form {
+    margin-top: 2.5rem;
+
+    .avatar-preview-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media only screen and (max-width: $phone) {
+            justify-content: center;
+        }
+
+        .avatar-preview-container {
+
+            @media only screen and (max-width: $phone) {
+                margin-bottom: 0.5rem;
+            }
+
+            img {
+                width: 180px;
+                height: 110px;
+                border: 1px solid #eee;
+                overflow: hidden;
+            }
+
+            .user-av {
+                width: 110px;
+                height: 110px;
+                border: 1px solid #eee;
+                overflow: hidden;
+                border-radius: 100%;
+            }
+        }
+
+        .avatar-preview-input {
+            
+            input[type='file'] {
+                border: none !important;
+            }
+        }
+    }
+}

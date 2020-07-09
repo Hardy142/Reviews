@@ -1,0 +1,85 @@
+.user-dashboard-reviews-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .user-dashboard-review-item-wrapper {
+        width: 49%;
+        margin-top: 1.25rem;
+        background: $offGreyColor;
+        
+        @media only screen and (max-width: $smallDesktop) {
+            width: 100%;
+        }
+
+        .user-dashboard-review-item-rest-name {
+            background: $primaryColor;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            line-height: 1.1;
+
+            span {
+                font-size: 0.7rem;
+            }
+        }
+
+        .user-dashboard-review-item {
+            min-height: 110px;
+            display: flex;
+
+            @media only screen and (max-width: $phone) {
+                display: block;
+            }
+    
+            .user-dashboard-review-image {
+                flex: 1;
+                max-width: 150px;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+
+                @media only screen and (max-width: $phone) {
+                    height: 100px;
+                    max-width: 100%;
+                }
+            }
+    
+            .user-dashboard-review-text-container {
+               padding: 1rem;
+               color: $primaryColor;
+               flex: 1;
+    
+               .user-dashboard-review-header {
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    font-size: 1rem;
+               }
+    
+               .user-dashboard-review-location {
+                    margin-bottom: 0.3rem;
+                    font-size: 0.7rem;
+               }
+    
+               .user-dashboard-review-rating {
+                    margin-bottom: 0;
+                    font-size: 0.7rem;
+                    color: #f5d742;
+                    background: #607d8b;
+                    padding: 0.08rem 0.6rem;
+                    border-radius: 24px;
+                    display: inline-block;
+
+                    .fas {
+                        margin: 0 0.2rem;
+                    }
+               }
+            }
+        }
+    }
+
+    .user-dashboard-review-item-wrapper-full {
+        width: 100%;
+    }
+}

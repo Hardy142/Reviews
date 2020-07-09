@@ -1,0 +1,33 @@
+// Body
+$body-bg: #fff;
+
+// Color Theme
+$primaryColor: #607d8b;
+$secondaryColor: darken($primaryColor, 20%);
+$primaryColorLight: lighten($primaryColor, 40%);
+$primaryColorLightest: lighten($primaryColor, 50%);
+$offGreyColor: #f9f9f9;
+
+// Media Query Breakpoints
+$largeDesktop: 1200px;
+$smallDesktop: 960px;
+$tablet: 776px;
+$phone: 520px;
+
+// Buttons
+@mixin button-primary {
+    background: $primaryColor;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    display: inline-block;
+    padding: 10px 22px;
+
+    &:hover {
+        background: darken($primaryColor, 20%);
+        text-decoration: none;
+        color: #fff;
+    }
+}

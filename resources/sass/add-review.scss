@@ -1,0 +1,33 @@
+#add-review-restaurant-header {
+    background: $primaryColor;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    cursor: pointer;
+}
+
+#add-review-restaurant-content {
+    min-height: 100px;
+
+    .add-review-restaurant-form-controls {
+        padding: 1rem;
+        background: $primaryColorLight;
+
+        .add-review-restaurant-location {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+#add-review-review-container {
+    padding: 1rem;
+    background: $primaryColorLightest;
+    display: none;
+
+    .review-submit-container {
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+}

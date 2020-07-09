@@ -1,0 +1,27 @@
+.pagination-wrapper {
+    margin-top: 1.25rem;
+
+    .pagination {
+        justify-content: center;
+
+        .page-item {
+            
+            span {
+                color: $primaryColor;
+            }
+
+            a {
+                color: $primaryColor;
+            } 
+        }
+
+        .active {
+            
+            span {
+                background: $primaryColor;
+                color: #fff;
+                border-color: $primaryColor;
+            }
+        }
+    }
+}

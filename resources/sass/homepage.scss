@@ -1,0 +1,246 @@
+#home-header-container {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+
+    #header-background-fill {
+        position: relative;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background: url('/../images/restaraunt-homepage.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .banner-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.5);
+            padding: 1.75rem;
+
+            .banner-text-wrapper {
+                display: none;
+
+                .home-banner-text {
+                    font-size: 38px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 0.03em;
+                    text-shadow: 2px 3px 4px #000;
+
+                    @media only screen and (max-width: $smallDesktop) {
+                        font-size: 1.2rem;
+                    }
+
+                    @media only screen and (max-width: $tablet) {
+                        text-align: center;
+                    }
+
+                    span {
+                        font-size: 42px;
+
+                        @media only screen and (max-width: $smallDesktop) {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.5);
+            padding: 1.75rem;
+
+            @media only screen and (max-width: $tablet) {
+                display: none;
+            }
+
+            .register-wrapper {
+                background: rgba(255,255,255,0.9);
+                padding: 25px;
+                box-shadow: 1px 2px 10px #333;
+                width: 90%;
+                max-width: 420px;
+                display: none;
+
+                .form-group {
+
+                    &:last-child {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+#mobile-register-container {
+    display: none;
+
+    @media only screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+#latest-reviews-container {
+    background: #fff !important;
+
+    .homepage-reviews-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    
+        .homepage-review-item {
+            width: 24%;
+            background: $offGreyColor;
+            cursor: pointer;
+            border: 2px solid #eee;
+            clip-path: polygon( 
+                calc(0% + 3px) calc(0% + 3px),
+                calc(100% - 3px) calc(0% + 3px),
+                calc(100% - 3px) calc(100% - 3px),
+                calc(0% + 3px) calc(100% - 3px)
+            );
+            transition: clip-path 0.3s linear;
+            
+            &:hover {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+            }
+
+            @media only screen and (max-width: $smallDesktop) {
+                width: 48%;
+                margin-bottom: 1.5rem;
+
+                &:nth-child(3) {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(4) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media only screen and (max-width: $phone) {
+                width: 100% !important;
+                margin-bottom: 1.5rem;
+
+                &:nth-child(3) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .review-rest-image {
+                height: 170px;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
+    
+            .review-location-info {
+                padding: 1.25rem;
+                text-align: center;
+    
+                .review-location-name {
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    color: $primaryColor;
+                    font-size: 1.1rem;
+                }
+    
+                .review-location-location {
+                    margin-bottom: 0;
+                    font-size: 0.85rem;
+                }
+            }
+    
+            .review-star-container {
+                background: $primaryColor;
+                padding: 0.4rem;
+                text-align: center;
+                color: #f5d742;
+                font-size: 1.1rem
+            }
+    
+            .review-author-info-container {
+    
+                .review-author-avatar {
+                    padding: 1.75rem 1.75rem 0 1.75rem;
+                    text-align: center;
+    
+                    img {
+                        width: 90%;
+                        max-width: 70px;
+                        border-radius: 100%;
+                    }
+                }
+    
+                .review-author-message {
+                    padding: 1.5rem;
+                    text-align: center;
+    
+                    .review-author-message-title {
+                        font-size: 0.9rem;
+                        line-height: 1.2;
+                        color: #607d8b;
+                        font-weight: 600;
+                        margin-bottom: 0.5rem;
+                    }
+    
+                    .review-author-message-message {
+                        font-size: 0.8rem;
+                        margin-bottom: 0;
+                    }
+    
+                    .review-author-message-date {
+                        font-size: 0.7rem;
+                        margin-top: 0.2rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#homepage-rest-search-wrapper {
+    padding-top: 1.5rem;
+
+    .home-rest-search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $primaryColor;
+        font-weight: 500;
+        margin-bottom: 1.75rem;
+
+        input[type="text"] {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            text-align: center;
+            
+            &:placeholder {
+                color: #999 !important;
+            }
+        }
+    }
+
+    .home-rest-search-sep {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $primaryColor;
+        font-weight: 500;
+        font-size: 0.8rem;
+        margin-bottom: 1.75rem;
+    }
+}
